@@ -1,0 +1,13 @@
+{
+  "name": "my-profile-with-sass",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "sass src/css/input/input.scss src/css/output/style.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
