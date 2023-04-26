@@ -3,30 +3,122 @@ html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  background-color: #000814;
 }
 
-h1 {
-  background-color: blue;
-  font-weight: 800;
-  font-style: italic;
-  font-size: 80px;
+body {
+  font-family: "Poppins", sans-serif;
 }
 
-ul {
-  width: 100px;
-  height: 20px;
-}
-ul li {
-  list-style-type: none;
+nav {
   width: 100%;
-  height: 100%;
-  margin-bottom: 2rem;
+  height: 6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 14rem;
+  position: fixed;
 }
-ul li a {
-  color: black;
-  font-weight: 400;
+nav .nav-brand {
   font-size: 2rem;
+  font-weight: 800;
   text-decoration: none;
+  color: #ffffff;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 6px;
+  text-align: center;
+  line-height: 3rem;
+  background-color: #0466c8;
+}
+nav .nav-item {
+  width: 40%;
+  display: flex;
+  text-transform: uppercase;
+}
+nav .nav-item .nav-link {
+  font-weight: 500;
+  text-decoration: none;
+  color: #ffffff;
+  margin: 0 2rem;
+}
+nav .nav-item .nav-link:hover {
+  text-decoration: underline;
+  color: #0466c8;
+}
+
+@media screen and (min-width: 590px) and (max-width: 896px) {
+  nav {
+    width: 3rem;
+    height: 100vh;
+    padding: 3rem 3rem;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+    top: 0;
+    left: 0;
+  }
+  nav .nav-brand {
+    margin-bottom: 2rem;
+  }
+  nav .nav-item {
+    height: 20%;
+    flex-direction: column;
+  }
+  nav .nav-item .nav-link {
+    margin: 0 0 1rem;
+  }
+  nav .nav-item .nav-link i {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 6px;
+    background-color: #ffffff;
+    color: #000814;
+    text-align: center;
+    line-height: 3rem;
+  }
+  nav .nav-item .nav-link:hover i {
+    background-color: #0466c8;
+    color: #ffffff;
+  }
+}
+@media screen and (max-width: 589px) {
+  nav {
+    width: 100%;
+    height: 100vh;
+  }
+  nav .nav-brand {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+  }
+  nav .nav-item {
+    width: 100%;
+    height: 3rem;
+    position: absolute;
+    bottom: 1rem;
+    left: -18px;
+  }
+  nav .nav-item .nav-link {
+    width: 3rem;
+    height: 3rem;
+    margin: 0 auto;
+  }
+  nav .nav-item .nav-link i {
+    width: 3rem;
+    height: 3rem;
+    text-align: center;
+    line-height: 3rem;
+    background-color: #ffffff;
+    color: #000000;
+    font-size: 1.5rem;
+    border-radius: 8px;
+  }
+  nav .nav-item .nav-link i.active {
+    background-color: #0466c8;
+    color: #ffffff;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
