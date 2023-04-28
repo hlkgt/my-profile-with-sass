@@ -191,6 +191,70 @@ nav .nav-item .nav-link:hover {
   grid-column: 1;
 }
 
+#skill {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 4rem 14rem;
+  background-color: #000814;
+  color: #ffffff;
+}
+#skill .title {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 42px;
+  margin-bottom: 16px;
+  letter-spacing: 3px;
+  font-weight: 700;
+}
+#skill .text-content {
+  width: 30rem;
+  margin-bottom: 40px;
+  color: rgba(255, 255, 255, 0.4);
+}
+#skill .row {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr, 1fr, 1fr, 1fr;
+  gap: 20px 20px;
+}
+#skill .row .col {
+  width: 14rem;
+  height: 20rem;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  text-align: center;
+}
+#skill .row .col img {
+  width: 14rem;
+  height: 14rem;
+  padding: 15px;
+}
+#skill .row .col h1 {
+  margin-bottom: 10px;
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.8);
+}
+#skill .row .col p {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.4);
+}
+#skill .row .col:nth-child(1) {
+  grid-row: 1;
+  grid-column: 1;
+}
+#skill .row .col:nth-child(2) {
+  grid-row: 1;
+  grid-column: 2;
+}
+#skill .row .col:nth-child(3) {
+  grid-row: 1;
+  grid-column: 3;
+}
+#skill .row .col:nth-child(4) {
+  grid-row: 1;
+  grid-column: 4;
+}
+
 @media screen and (min-width: 590px) and (max-width: 896px) {
   nav {
     width: 3rem;
@@ -253,6 +317,26 @@ nav .nav-item .nav-link:hover {
   #about .row .content:last-child {
     grid-row: 2;
     grid-column: 1;
+  }
+  #skill .row {
+    grid-template-columns: 1fr, 1fr;
+    grid-template-rows: auto;
+  }
+  #skill .row .col:nth-child(1) {
+    grid-row: 1;
+    grid-column: 1;
+  }
+  #skill .row .col:nth-child(2) {
+    grid-row: 1;
+    grid-column: 2;
+  }
+  #skill .row .col:nth-child(3) {
+    grid-row: 2;
+    grid-column: 1;
+  }
+  #skill .row .col:nth-child(4) {
+    grid-row: 2;
+    grid-column: 2;
   }
 }
 @media screen and (max-width: 589px) {
@@ -362,6 +446,41 @@ nav .nav-item .nav-link:hover {
   }
   #about .row .content:last-child {
     grid-row: 2;
+    grid-column: 1;
+  }
+  #skill {
+    align-items: center;
+    padding: 10rem 0;
+  }
+  #skill .text-content {
+    width: 15rem;
+  }
+  #skill .row {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+  #skill .row .col {
+    width: 21rem;
+    height: 27rem;
+  }
+  #skill .row .col img {
+    width: 21rem;
+    height: 21rem;
+  }
+  #skill .row .col:nth-child(1) {
+    grid-row: 1;
+    grid-column: 1;
+  }
+  #skill .row .col:nth-child(2) {
+    grid-row: 2;
+    grid-column: 1;
+  }
+  #skill .row .col:nth-child(3) {
+    grid-row: 3;
+    grid-column: 1;
+  }
+  #skill .row .col:nth-child(4) {
+    grid-row: 4;
     grid-column: 1;
   }
 }

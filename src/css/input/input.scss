@@ -209,6 +209,65 @@ nav {
     }
   }
 }
+#skill {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 4rem 14rem;
+  background-color: $primary-color;
+  color: #ffffff;
+  .title {
+    color: rgba($color: #ffffff, $alpha: 0.8);
+    font-size: 42px;
+    margin-bottom: 16px;
+    letter-spacing: 3px;
+    font-weight: $fw-bold;
+  }
+  .text-content {
+    width: 30rem;
+    margin-bottom: 40px;
+    color: rgba($color: #ffffff, $alpha: 0.4);
+  }
+  .row {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr, 1fr, 1fr, 1fr;
+    gap: 20px 20px;
+    .col {
+      width: 14rem;
+      height: 20rem;
+      background-color: rgba(0, 0, 0, 0.2);
+      border-radius: 10px;
+      text-align: center;
+      img {
+        width: 14rem;
+        height: 14rem;
+        padding: 15px;
+      }
+      h1 {
+        margin-bottom: 10px;
+        font-size: 20px;
+        color: rgba($color: #ffffff, $alpha: 0.8);
+      }
+      p {
+        font-size: 14px;
+        color: rgba($color: #ffffff, $alpha: 0.4);
+      }
+    }
+    .col:nth-child(1) {
+      @include grid-position(1, 1);
+    }
+    .col:nth-child(2) {
+      @include grid-position(1, 2);
+    }
+    .col:nth-child(3) {
+      @include grid-position(1, 3);
+    }
+    .col:nth-child(4) {
+      @include grid-position(1, 4);
+    }
+  }
+}
 @media screen and (min-width: 590px) and (max-width: 896px) {
   nav {
     width: 3rem;
@@ -269,6 +328,24 @@ nav {
       }
       .content:last-child {
         @include grid-position(2, 1);
+      }
+    }
+  }
+  #skill {
+    .row {
+      grid-template-columns: 1fr, 1fr;
+      grid-template-rows: auto;
+      .col:nth-child(1) {
+        @include grid-position(1, 1);
+      }
+      .col:nth-child(2) {
+        @include grid-position(1, 2);
+      }
+      .col:nth-child(3) {
+        @include grid-position(2, 1);
+      }
+      .col:nth-child(4) {
+        @include grid-position(2, 2);
       }
     }
   }
@@ -380,6 +457,37 @@ nav {
       }
       .content:last-child {
         @include grid-position(2, 1);
+      }
+    }
+  }
+  #skill {
+    align-items: center;
+    padding:10rem 0;
+    .text-content{
+      width: 15rem;
+    }
+    .row {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+      .col{
+        width: 21rem;
+        height: 27rem;
+        img{
+          width: 21rem;
+          height: 21rem;
+        }
+      }
+      .col:nth-child(1) {
+        @include grid-position(1, 1);
+      }
+      .col:nth-child(2) {
+        @include grid-position(2, 1);
+      }
+      .col:nth-child(3) {
+        @include grid-position(3, 1);
+      }
+      .col:nth-child(4) {
+        @include grid-position(4, 1);
       }
     }
   }
